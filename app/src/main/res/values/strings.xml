@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Budget Manager</string>
+    <string name="menu_spend">Spend</string>
+    <string name="menu_savings">Savings</string>
+    <string name="menu_profile">Profile</string>
+    <string name="menu_sharing">Sharing</string>
+</resources>

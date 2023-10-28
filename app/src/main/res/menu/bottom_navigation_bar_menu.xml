@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item android:id="@+id/menuSpend"
+        android:icon="@drawable/spend"
+        android:title="@string/menu_spend"
+        app:showAsAction="ifRoom"/>
+
+    <item android:id="@+id/menuSaving"
+        android:icon="@drawable/saving"
+        android:title="@string/menu_savings"
+        app:showAsAction="ifRoom"/>
+
+    <item
+        android:id="@+id/menuPlaceHolder"
+        android:title=""/>
+
+    <item android:id="@+id/menuSharing"
+        android:icon="@drawable/sharing"
+        android:title="@string/menu_sharing"
+        app:showAsAction="ifRoom"/>
+
+    <item android:id="@+id/menuProfile"
+        android:icon="@drawable/profile"
+        android:title="@string/menu_profile"
+        app:showAsAction="ifRoom"/>
+</menu>
