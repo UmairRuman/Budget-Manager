@@ -30,6 +30,7 @@ public class MainActivity extends AppCompatActivity {
                 if(item.getItemId() == R.id.menuProfile){
                     getSupportFragmentManager().beginTransaction().replace(R.id.fragmentContainerView,profileFragment).setReorderingAllowed(true).commit();
                 }
+
                 return true;
             }
         });
