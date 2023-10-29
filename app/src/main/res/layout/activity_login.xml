@@ -48,6 +48,7 @@
         app:layout_constraintEnd_toEndOf="@id/etUserName"
         app:layout_constraintTop_toBottomOf="@id/etUserName"
         android:layout_marginTop="30dp"
+
         android:hint="Password"
         android:inputType="textPassword"
         android:paddingStart="20dp"
