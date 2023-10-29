@@ -13,10 +13,8 @@ import android.view.View;
 import android.view.ViewGroup;
 public class ProfileFragment extends Fragment {
     AppCompatButton btnReminder,btnProfileSettings,btnGeneralSettings,btnBudgetHistory,btnFeedBack;
-    Intent intentReminder =new Intent(getActivity().getApplication(), ReminderActivity.class);
-    Intent intentProfileSettings =new Intent(getActivity().getApplication(), ProfileSettingsActivity.class);
-    Intent intentGeneralSettings =new Intent(getActivity().getApplication(), GeneralSettingsActivity.class);
-    Intent intentBudgetHistory =new Intent(getActivity().getApplication(), BudgetHistoryActivity.class);
+    Intent intentReminder ,intentProfileSettings ,intentGeneralSettings ,intentBudgetHistory;
+
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -32,6 +30,10 @@ public class ProfileFragment extends Fragment {
         btnGeneralSettings = view.findViewById(R.id.btnGeneralSettings);
         btnBudgetHistory = view.findViewById(R.id.btnBudgetHistory);
         btnFeedBack = view.findViewById(R.id.btnFeedBack);
+        intentReminder =new Intent(getContext(), ReminderActivity.class);
+        intentProfileSettings =new Intent(getContext(), ProfileSettingsActivity.class);
+        intentGeneralSettings =new Intent(getContext(), GeneralSettingsActivity.class);
+        intentBudgetHistory =new Intent(getContext(), BudgetHistoryActivity.class);
         return view;
     }
 
