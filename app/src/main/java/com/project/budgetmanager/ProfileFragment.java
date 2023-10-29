@@ -42,6 +42,6 @@ public class ProfileFragment extends Fragment {
 
 
 
-        //Abdullah uper kam kri
+        //Abdullah upper kam kri
     }
 }
