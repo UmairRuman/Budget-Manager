@@ -12,8 +12,11 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 public class ProfileFragment extends Fragment {
-    AppCompatButton btnNotify;
-
+    AppCompatButton btnReminder,btnProfileSettings,btnGeneralSettings,btnBudgetHistory,btnFeedBack;
+    Intent intentReminder =new Intent(getActivity().getApplication(), ReminderActivity.class);
+    Intent intentProfileSettings =new Intent(getActivity().getApplication(), ProfileSettingsActivity.class);
+    Intent intentGeneralSettings =new Intent(getActivity().getApplication(), GeneralSettingsActivity.class);
+    Intent intentBudgetHistory =new Intent(getActivity().getApplication(), BudgetHistoryActivity.class);
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -24,7 +27,11 @@ public class ProfileFragment extends Fragment {
         // Inflate the layout for this fragment
         View view=inflater.inflate(R.layout.fragment_profile, container, false);
         //Define Your Ids Here
-        btnNotify = view.findViewById(R.id.btnReminder);
+        btnReminder = view.findViewById(R.id.btnReminder);
+        btnProfileSettings = view.findViewById(R.id.btnProfileSettings);
+        btnGeneralSettings = view.findViewById(R.id.btnGeneralSettings);
+        btnBudgetHistory = view.findViewById(R.id.btnBudgetHistory);
+        btnFeedBack = view.findViewById(R.id.btnFeedBack);
         return view;
     }
 
@@ -37,22 +44,15 @@ public class ProfileFragment extends Fragment {
     @Override
     public void onResume() {
         super.onResume();
-  // do all the work here set ur recycler view etc.
+        // do all the work here set ur recycler view etc.
 
-
-
-//Reminder Button
-        Intent intent=new Intent(getActivity().getApplication(), ReminderActivity.class);
-   btnNotify.setOnClickListener(new View.OnClickListener() {
-       @Override
-       public void onClick(View view) {
-            startActivity(intent);
-         }
-     });
-
-
-
-
-  
+        //Reminder Button
+        btnReminder.setOnClickListener(view -> startActivity(intentReminder));
+        //Profile Settings Button
+        btnProfileSettings.setOnClickListener(v -> startActivity(intentProfileSettings));
+        //General Settings Button
+        btnGeneralSettings.setOnClickListener(v -> startActivity(intentGeneralSettings));
+        //Budget History Button
+        btnBudgetHistory.setOnClickListener(v -> startActivity(intentBudgetHistory));
     }
 }
