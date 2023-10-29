@@ -1,5 +1,6 @@
 package com.project.budgetmanager;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
@@ -39,9 +40,13 @@ public class ProfileFragment extends Fragment {
   // do all the work here set ur recycler view etc.
 
 
-
-
-
-        //Abdullah uper kam kri
+//Reminder Button
+        Intent intent=new Intent(getActivity().getApplication(), ReminderActivity.class);
+   btnNotify.setOnClickListener(new View.OnClickListener() {
+       @Override
+       public void onClick(View view) {
+            startActivity(intent);
+         }
+     });
     }
 }
