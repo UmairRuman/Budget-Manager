@@ -1,13 +1,53 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
+    android:orientation="horizontal"
+    android:layout_gravity="center"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <com.google.android.material.card.MaterialCardView
-        android:layout_width="320dp"
+        android:layout_width="350dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="10dp"
         app:cardBackgroundColor="@color/purple"
         android:layout_height="80dp">
-
+        <LinearLayout
+            android:layout_width="345dp"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_height="match_parent">
+            <ImageView
+                android:id="@+id/ivProductImage"
+            android:layout_width="50dp"
+            android:layout_height="50dp"/>
+            <TextView
+                android:id="@+id/tvItemName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Milk"
+                android:textSize="30sp"
+                android:textColor="@color/black"
+                android:layout_marginStart="10dp"/>
+            <TextView
+                android:id="@+id/tvInputPrice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:text="-1100"
+                android:layout_marginStart="125dp"
+                android:textColor="@color/black"
+                android:textSize="15sp"/>
+               <TextView
+                   android:id="@+id/tvRupees"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:text="Rs."
+                   android:textStyle="bold"
+                   android:textSize="15sp"
+                   android:textColor="@color/black"
+                   android:layout_marginStart="2dp"/>
+        </LinearLayout>
     </com.google.android.material.card.MaterialCardView>
+
 </LinearLayout>
