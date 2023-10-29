@@ -40,6 +40,7 @@ public class ProfileFragment extends Fragment {
   // do all the work here set ur recycler view etc.
 
 
+
 //Reminder Button
         Intent intent=new Intent(getActivity().getApplication(), ReminderActivity.class);
    btnNotify.setOnClickListener(new View.OnClickListener() {
@@ -48,5 +49,10 @@ public class ProfileFragment extends Fragment {
             startActivity(intent);
          }
      });
+
+
+
+
+  
     }
 }
