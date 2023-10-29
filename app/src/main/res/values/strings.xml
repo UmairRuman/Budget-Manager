@@ -7,4 +7,8 @@
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="reminder">Reminder</string>
+    <string name="profile_settings">Profile Settings</string>
+    <string name="general_settings">General Settings</string>
+    <string name="feed_back">Feed Back</string>
+    <string name="budget_history">Budget History</string>
 </resources>
