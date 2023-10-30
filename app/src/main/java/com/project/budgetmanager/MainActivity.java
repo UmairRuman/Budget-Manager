@@ -29,6 +29,11 @@ public class MainActivity extends AppCompatActivity {
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
                 if(item.getItemId() == R.id.menuProfile){
                     getSupportFragmentManager().beginTransaction().replace(R.id.fragmentContainerView,profileFragment).setReorderingAllowed(true).commit();
+                }if (item.getItemId() == R.id.menuSaving) {
+                    getSupportFragmentManager().beginTransaction()
+                            .setReorderingAllowed(true)
+                            .add(R.id.savingFragment, SavingFragment.class, null)
+                            .commit();
                 }
 
                 return true;
