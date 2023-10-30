@@ -8,6 +8,7 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
+        android:background="@drawable/base_gradient"
         android:layout_height="match_parent">
 
         <androidx.constraintlayout.widget.Guideline
@@ -23,24 +24,156 @@
             android:layout_height="wrap_content"
             android:orientation="horizontal"
             app:layout_constraintGuide_percent="0.01" />
+        <androidx.coordinatorlayout.widget.CoordinatorLayout
+            android:id="@+id/SpendingFragmentTopCoordinatorLayout"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <com.google.android.material.appbar.AppBarLayout
+                android:layout_width="match_parent"
+                android:background="@android:color/transparent"
+                android:layout_height="match_parent">
+                <com.google.android.material.appbar.MaterialToolbar
+                    android:id="@+id/SpendingFragmentTopMaterialTollBar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:title="2023-10"
+                    app:titleTextColor="@color/white"
+                    app:menu="@menu/spending_fragment_menu"
+                    app:navigationIcon="@drawable/baseline_calendar_month_24" />
+            </com.google.android.material.appbar.AppBarLayout>
+        </androidx.coordinatorlayout.widget.CoordinatorLayout>
 
         <TextView
-            android:id="@+id/tvShowExpenses"
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            app:layout_constraintHeight_percent="0.2"
+            android:id="@+id/tvShowBalance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+           android:text="+20,000"
+            android:textStyle="bold"
+            android:layout_marginStart="5dp"
+            android:textSize="30sp"
+            android:textColor="@color/white"
+           app:layout_constraintTop_toTopOf="@id/topHorizontalGuideline"
             app:layout_constraintStart_toStartOf="@id/leftSideVerticalGuideline"
-          app:layout_constraintTop_toTopOf="@id/topHorizontalGuideline"
-            />
+            android:layout_marginTop="50dp"/>
+        <TextView
+            android:id="@+id/tvExpense"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/tvExpense"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            app:layout_constraintStart_toStartOf="@id/tvShowBalance"
+            app:layout_constraintTop_toBottomOf="@id/tvShowBalance"
+            android:layout_marginTop="5dp"/>
+        <TextView
+            android:id="@+id/tvShowExpenseOutput"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toEndOf="@id/tvExpense"
+            app:layout_constraintTop_toTopOf="@id/tvExpense"
+            android:text="-1000"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toBottomOf="@id/tvExpense"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            android:layout_marginStart="5dp"/>
+        <TextView
+            android:id="@+id/tvBudget"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/tvBudget"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            app:layout_constraintStart_toStartOf="@id/tvExpense"
+            app:layout_constraintTop_toBottomOf="@id/tvExpense"
+            android:layout_marginTop="5dp"/>
+        <TextView
+            android:id="@+id/tvShowBudgetOutput"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="+3000"
+            android:textSize="20sp"
+            android:layout_marginStart="5dp"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@id/tvBudget"
+            app:layout_constraintTop_toTopOf="@id/tvBudget"
+            app:layout_constraintBottom_toBottomOf="@id/tvBudget"/>
+        <androidx.cardview.widget.CardView
+            android:id="@+id/spendingFragmentCardView"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintHeight_percent="0.75"
+            app:layout_constraintWidth_percent="0.97"
+            app:cardCornerRadius="20dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="5dp"
+            app:layout_constraintStart_toStartOf="@id/leftSideVerticalGuideline"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvBudget">
 
-<!--        <androidx.cardview.widget.CardView-->
-<!--            android:layout_width="300dp"-->
-<!--            android:layout_height="300dp"-->
-<!--            app:layout_constraintTop_toBottomOf="@id/tvShowExpenses"-->
-<!--            app:cardBackgroundColor="@color/purple"-->
-<!--            app:cardCornerRadius="50"/>-->
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/cardViewLeftSideVerticalGuideline"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    app:layout_constraintGuide_percent="0.01" />
+
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/cardViewRightSideVerticalGuideline"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    app:layout_constraintGuide_percent="0.99" />
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/cardViewTopHorizontalGuideline"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    app:layout_constraintGuide_percent="0.01" />
+
+                <TextView
+                    android:id="@+id/tvListHeading"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:text="Daily"
+                    android:textColor="@color/black"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="@id/cardViewRightSideVerticalGuideline"
+                    app:layout_constraintStart_toStartOf="@id/cardViewLeftSideVerticalGuideline"
+                    app:layout_constraintTop_toTopOf="@id/cardViewTopHorizontalGuideline" />
+
+                <com.google.android.material.divider.MaterialDivider
+                    android:id="@+id/materialDivider"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tvListHeading"
+                    app:layout_constraintWidth_percent="0.8" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rvSpendingFragment"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                  app:layout_constraintStart_toStartOf="@id/cardViewLeftSideVerticalGuideline"
+                    app:layout_constraintEnd_toEndOf="@id/cardViewRightSideVerticalGuideline"
+                    app:layout_constraintTop_toBottomOf="@id/materialDivider"
+                    android:layout_marginTop="5dp"/>
 
 
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.cardview.widget.CardView>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

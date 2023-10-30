@@ -11,4 +11,9 @@
     <string name="general_settings">General Settings</string>
     <string name="feed_back">Feed Back</string>
     <string name="budget_history">Budget History</string>
+    <string name="tvExpense">Expense :</string>
+    <string name="tvBudget">Budget :</string>
+    <string name="tvItemDaily">Daily Catalogs</string>
+    <string name="tvItemWeekly">Weekly Catalogs</string>
+    <string name="tvItemMonthly">Monthly Catalogs</string>
 </resources>
