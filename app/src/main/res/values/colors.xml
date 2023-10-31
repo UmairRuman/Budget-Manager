@@ -2,9 +2,15 @@
 <resources>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
-    <color name="dullwhite">#FFE0E0</color>
-    <color name="purple">#D189DF</color>
+    <color name="dullwhite">#918E8E</color>
+    <color name="purple">#552B9F</color>
+    <color name="pink">#B534CC</color>
     <color name="cyan">#74EBE0</color>
     <color name="red">#FF0000</color>
-    <color name="green">#28E213</color>
+    <color name="lightGreen">#28E213</color>
+    <color name="DarkGreen">#166C0C</color>
+    <color name="darkBlue">#101D6A</color>
+    <color name="darkOrange">#FF5722</color>
+    <color name="yellow">#FFC107</color>
+
 </resources>
