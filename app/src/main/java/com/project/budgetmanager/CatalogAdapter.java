@@ -13,11 +13,11 @@ import androidx.recyclerview.widget.RecyclerView;
 import java.util.List;
 
 public class CatalogAdapter extends RecyclerView.Adapter<CatalogAdapter.CatalogViewHolder> {
-    List<> catalogList;
+    List<CatalogModel> catalogList;
     OnCatalogClickListener catalogClickListener;
 
 
-    public CatalogAdapter(List <>catalogList) {
+    public CatalogAdapter(List <CatalogModel>catalogList) {
         this.catalogList = catalogList;
     }
 
@@ -34,7 +34,11 @@ public class CatalogAdapter extends RecyclerView.Adapter<CatalogAdapter.CatalogV
     }
 
     @Override
-    public void onBindViewHolder(@NonNull CatalogViewHolder holder, int position) {
+    public void onBindViewHolder(@NonNull CatalogViewHolder holder, int position){
+        CatalogModel catalog=catalogList.get(position);
+        holder.image.setImageResource(catalog.getCatalogImageResourceId());
+        holder.itemName.setText(catalog.getCatalogName());
+        holder.itemPrice.setText(Integer.toString(catalog.getCatalogPrice()));
 
     }
 
@@ -52,6 +56,7 @@ public class CatalogAdapter extends RecyclerView.Adapter<CatalogAdapter.CatalogV
             image=itemView.findViewById(R.id.ivProductImage);
             itemName=itemView.findViewById(R.id.tvItemName);
             itemPrice=itemView.findViewById(R.id.tvInputPrice);
+            //set The method for single click
             itemView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
@@ -63,6 +68,7 @@ public class CatalogAdapter extends RecyclerView.Adapter<CatalogAdapter.CatalogV
                     }
                 }
             });
+            //set the method for long click
             itemView.setOnLongClickListener(new View.OnLongClickListener() {
                 @Override
                 public boolean onLongClick(View view) {

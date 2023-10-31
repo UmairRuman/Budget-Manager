@@ -14,15 +14,15 @@ public class CatalogModel {
     }
 
     // catalog image resource id for dummy data
-    int catalogImageResourceId;
+    private int catalogImageResourceId;
     // catalog name will describe the catalog
-     String catalogName;
+    private String catalogName;
      // catalog id should be specific id will work as PRIMARY_KEY
-     int catalogId;
+     private int catalogId;
      // catalog Category means daily weekly or monthly catalog
-     int catalogCategory;
+     private int catalogCategory;
      // catalog Price will describe how much user spent on it according to category
-     int catalogPrice;
+     private int catalogPrice;
 
     public int getCatalogImageResourceId() {
         return catalogImageResourceId;
