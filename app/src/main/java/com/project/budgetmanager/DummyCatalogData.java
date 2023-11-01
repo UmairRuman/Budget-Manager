@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 public class DummyCatalogData {
 
-    public ArrayList<CatalogModel> generateDailyCatalogData(){
+    public static ArrayList<CatalogModel> generateDailyCatalogData(){
         ArrayList<CatalogModel> list = new ArrayList<>();
         list.add(new CatalogModel(R.drawable.w_pic,"catalogFirst",1,CatalogModel.DAILY_CATALOG,1000));
         list.add(new CatalogModel(R.drawable.w_pic,"catalogSecond",2,CatalogModel.DAILY_CATALOG,1000));
@@ -22,7 +22,7 @@ public class DummyCatalogData {
     return list;
     }
 
-    public ArrayList<CatalogModel> generateWeeklyCatalogData(){
+    public static ArrayList<CatalogModel> generateWeeklyCatalogData(){
         ArrayList<CatalogModel> list = new ArrayList<>();
         list.add(new CatalogModel(R.drawable.w_pic,"catalogFirst",14,CatalogModel.WEEKLY_CATALOG,4000));
         list.add(new CatalogModel(R.drawable.w_pic,"catalogSecond",15,CatalogModel.WEEKLY_CATALOG,4000));
@@ -40,7 +40,7 @@ public class DummyCatalogData {
         return list;
     }
 
-    public ArrayList<CatalogModel> generateMonthlyCatalogData(){
+    public static ArrayList<CatalogModel> generateMonthlyCatalogData(){
         ArrayList<CatalogModel> list = new ArrayList<>();
         list.add(new CatalogModel(R.drawable.w_pic,"catalogFirst",27,CatalogModel.MONTHS_CATALOG,50000));
         list.add(new CatalogModel(R.drawable.w_pic,"catalogSecond",28,CatalogModel.MONTHS_CATALOG,50000));

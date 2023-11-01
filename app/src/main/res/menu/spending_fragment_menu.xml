@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+<item
+    android:id="@+id/tvMenuDailyCatalogs"
+    android:title="@string/tvItemDaily"/>
+    <item
+        android:id="@+id/tvMenuWeeklyCatalogs"
+        android:title="@string/tvItemWeekly"/>
+    <item
+        android:id="@+id/tvMenuMonthlyCatalogs"
+        android:title="@string/tvItemMonthly"/>
+</menu>
